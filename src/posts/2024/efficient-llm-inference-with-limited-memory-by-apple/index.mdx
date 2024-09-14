@@ -1,0 +1,40 @@
+---
+title: "Efficient LLM Inference with Limited Memory by Apple"
+summary: "Apple's innovative approach to running large language models locally, using flash memory and dynamic parameter loading to exceed DRAM limitations."
+cover: assets/efficient-llms.jpg
+date: 2024-09-14
+---
+
+Apple has found a way to run large language models (LLMs) locally, exceeding available DRAM capacity by leveraging flash memory for LLM weight tensor storage and dynamic loading into DRAM.
+
+- [ARXIV preprint by Apple](https://lnkd.in/gxASDYJX) titled "Efficient Large Language Model Inference with Limited Memory" introduces this innovative technique.
+- By dynamically loading parameters from flash memory, Apple addresses the challenge of running models that are too large for DRAM alone.
+- This method involves exploiting sparsity in the FeedForward Network (FFN) layers, using selective loading of parameters, sparsity prediction, and static memory preallocation.
+
+## Key Insights
+
+- Standard methods require loading the entire model into DRAM, but Apple's approach selectively loads parameters from flash memory as needed.
+- The model utilizes the HuggingFace transformers, KV caching, and a 32-thread reading process to optimize performance.
+
+> See the full paper on [ARXIV](https://lnkd.in/gxASDYJX).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nI3uYT3quxQ?si=TRD-2-tpR1T7Wb-n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Memory Allocation Breakdown
+
+The memory retained in DRAM for Apple's model includes multiple components:
+
+- **Embeddings**: 3% of the model size.
+- **Attention Model weights**: 32.3%.
+- **Feed Forward Network (FFN)**: 15.5% (calculated as 0.24 × 64.62).
+- **Predictor**: 1.25%.
+
+The total DRAM usage amounts to 52.1% of the model size.
+
+> Hint: The Mixture of Experts (MoE) model, which has sparse structures in its FFN layer, could combine well with Apple’s method, allowing even larger MoEs to run on personal devices.
+
+Source: [Apple’s ARXIV paper](https://lnkd.in/gXtXtubx)
+
+## Deep Dive:
+
+- [Full ARXIV Preprint](https://lnkd.in/gxASDYJX)

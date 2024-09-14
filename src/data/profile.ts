@@ -19,7 +19,7 @@ export const profile: Profile = {
   tags: [
     { name: 'AI' },
     { name: 'LLMs' },
-    { name: 'Computer Vision' },
+    { name: 'NLP' },
   ],
   socialLinks,
 };
