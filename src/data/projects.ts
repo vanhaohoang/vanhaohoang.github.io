@@ -6,7 +6,7 @@ export const projects: Projects = {
     name: '🤖 Llama-Index-Text-To-SQL',
     srcURL: { url: 'https://github.com/vanhaohoang/Llama-Index-Text-To-SQL' },
     demoURL: { url: 'https://github.com/vanhaohoang/Llama-Index-Text-To-SQL' },
-    cover: { srcPath: 'projects/micrograd-ts/04-cover.png' },
+    cover: { srcPath: 'projects/llama-index-text-to-sql/text-to-sql.jpg' },
     startDate: '2023-08-06',
     summary: [
       'This notebook demonstrates the use of Llama-Index for performing Text-to-SQL queries on a SQL database. It explores two approaches: Basic Text-to-SQL using NLSQLTableQueryEngine and Advanced Text-to-SQL using SQLTableRetrieverQueryEngine. We integrated DuckDB as the in-memory SQL engine and utilizes SQLAlchemy to manage database operation',
