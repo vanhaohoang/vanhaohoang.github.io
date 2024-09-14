@@ -1,6 +1,6 @@
 export const siteURL = 'https://vanhaohoang.github.io';
 export const defaultSiteTitle = 'Hao Hoang dev';
-export const defaultSiteDescription = 'Personal blog and projects by Oleksii Trekhleb';
+export const defaultSiteDescription = 'Personal blog and projects by Van Hao Hoang';
 export const brandName = 'Hao Hoang';
 export const windowNamePrefix = brandName;
 export const windowNameSeparator = '|';
