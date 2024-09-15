@@ -7,7 +7,7 @@ type SubscriptionFormProps = {
 const SubscriptionForm = (props: SubscriptionFormProps): React.ReactElement => {
   const { withHeader = true } = props;
 
-  const formAction = 'https://dev.us1.list-manage.com/subscribe/post?u=7714f14ff32085c685da2cfaa&amp;id=53ffa81463';
+  const formAction = 'https://gmail.us8.list-manage.com/subscribe?u=5adef344d2c51668e5ca2569f&id=b128317c3c';
 
   const inputClass = 'border py-2 px-3 mb-3 rounded border-gray-300 border-solid appearance-none';
 
